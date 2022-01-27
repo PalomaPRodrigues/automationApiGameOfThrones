@@ -6,9 +6,4 @@ public interface ApiVerbos {
 
     void POST();
 
-    void PUT();
-
-    void PATCH();
-
-    void DELETE();
 }

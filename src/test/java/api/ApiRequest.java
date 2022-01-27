@@ -28,40 +28,4 @@ public class ApiRequest extends ApiUtils implements ApiVerbos {
 
     }
 
-    @Override
-    public void PUT() {
-        response = given()
-                .request().log().all()
-                .relaxedHTTPSValidation()
-                .headers(headers)
-                .body(body.toString())
-                .put(uri);
-
-        super.log("PUT");
-    }
-
-    @Override
-    public void PATCH() {
-        response = given()
-                .request().log().all()
-                .relaxedHTTPSValidation()
-                .headers(headers)
-                .body(body.toString())
-                .patch(uri);
-
-        super.log("PATCH");
-
-    }
-
-    @Override
-    public void DELETE() {
-        response = given()
-                .request().log().all()
-                .relaxedHTTPSValidation()
-                .headers(headers)
-                .delete(uri);
-
-        super.log("DELETE");
-
-    }
 }
