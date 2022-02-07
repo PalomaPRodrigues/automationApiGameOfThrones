@@ -58,7 +58,8 @@ public class CharactersSteps extends ApiRequest {
     }
     @Quando("consulta dados desse personagem")
     public void consulta_dados_desse_personagem() {
-        super.uri = prop.getProp("uri_gameOfThornes") + "/" + "2";
+        String id = "2";
+        super.uri = prop.getProp("uri_gameOfThornes") + "/" + id;
         super.headers = apiHeaders.gameOfThrones();
         super.body = new JSONObject();
         super.GET();
